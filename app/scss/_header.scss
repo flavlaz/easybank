@@ -23,6 +23,7 @@
         right: 0;
         bottom: 0;
         left: 0;
+        z-index: 1;
         background:linear-gradient($darkBlue, transparent); 
     }
     nav {
@@ -30,6 +31,7 @@
         padding-bottom: 1.0625rem;
         position: relative;
         background-color: $white;
+        z-index: 1;
     }
     &__logo {
         img {
@@ -62,6 +64,7 @@
         margin-top: 1.5rem;
         left:50%;
         transform: translateX(-50%);
+        z-index: 1;
         a{
             display: block;
             padding: 0.625rem;
@@ -103,10 +106,7 @@
     }
     &__cta {
         font-size: $fontSmall;
-        transition: all .3s ease-in-out;
-        &:hover{
-            opacity: 0.75;
-        }
+
     }
 }
 
