@@ -1,0 +1,35 @@
+@keyframes over-in {
+    from {
+        visibility: hidden;
+        opacity: 0;
+    }
+    1%{
+        visibility: visible;
+        opacity: 0;
+    }
+    to {
+
+        opacity: 1;
+    }
+}
+.over-in {
+    animation: over-in .3s ease-in-out forwards;
+}
+@keyframes over-out {
+    from {
+        visibility: visible;
+        opacity: 1;
+    }
+    99%{
+        visibility: visible;
+        opacity: 0;
+    }
+    to {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.over-out {
+    animation: over-out .3s ease-in-out forwards;
+}

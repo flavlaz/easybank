@@ -1,3 +1,71 @@
+@-webkit-keyframes over-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes over-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.over-in {
+  -webkit-animation: over-in .3s ease-in-out forwards;
+          animation: over-in .3s ease-in-out forwards;
+}
+
+@-webkit-keyframes over-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes over-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.over-out {
+  -webkit-animation: over-out .3s ease-in-out forwards;
+          animation: over-out .3s ease-in-out forwards;
+}
+
 html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
@@ -70,6 +138,31 @@ button, .button {
   }
 }
 
+.header.open .header__menu > span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header.open .header__menu > span:nth-child(2) {
+  opacity: 0;
+}
+
+.header.open .header__menu > span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.header .overlay {
+  opacity: 0;
+  position: fixed;
+  top: 3.8125rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2d314d), to(transparent));
+  background: linear-gradient(#2d314d, transparent);
+}
+
 .header nav {
   padding: 1.0625rem 1.5rem;
 }
@@ -84,10 +177,14 @@ button, .button {
   width: 25px;
   height: 2px;
   background-color: #2d314d;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  -webkit-transform-origin: 3px 1px;
+          transform-origin: 3px 1px;
 }
 
 .header__menu > span:not(:last-child) {
-  margin-bottom: 3px;
+  margin-bottom: 5px;
 }
 
 .header__links a {
