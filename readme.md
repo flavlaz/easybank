@@ -1,3 +1,3 @@
-#This is a challange from Front End Mentor
+# This is a challange from Front End Mentor
 
-## to code this i used HTML + SCSS and Javascript.
+### to code this i used HTML + SCSS and Javascript.
