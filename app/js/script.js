@@ -1,15 +1,25 @@
 //hamburger menu functionality
 const menuBtn = document.getElementById('menu-btn');
+const body = document.querySelector('body');
 const header = document.getElementById('header');
 const overlay = document.getElementById('overlay');
+const fadeElements = document.querySelectorAll('.has-fade');
+
 
 menuBtn.addEventListener('click', ()=> {
     header.classList.toggle('open');
     if(header.classList.contains('open')){
-        overlay.classList.remove('over-out')
-        overlay.classList.add('over-in');
+        fadeElements.forEach(function(element){
+            element.classList.remove('over-out')
+            element.classList.add('over-in');
+        });
+        body.classList.add('noscroll');
+
     } else {
-        overlay.classList.remove('over-in');
-        overlay.classList.add('over-out');
+        fadeElements.forEach(function(element){
+            element.classList.remove('over-in');
+            element.classList.add('over-out');
+        })
+        body.classList.remove('noscroll');
     }
 })
